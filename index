@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WestSevilla | Entradas para las mejores discotecas de Sevilla</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5156974436346448" crossorigin="anonymous"></script>
+<meta name="description" content="Compra tu entrada para Bottom, Vizzio y Abril. Ocio nocturno en Sevilla.">
+<meta property="og:title" content="WestSevilla">
+<meta property="og:description" content="Entradas para las discotecas de Sevilla.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14122b;--dusk:#2b2358;--sand:#f3e9dc;--coral:#ff6b57;--sea:#3cc8c0;--muted:#b9b3d6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",system-ui,sans-serif;background:var(--ink);color:var(--sand);line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:rgba(20,18,43,.92);backdrop-filter:blur(8px);border-bottom:1px solid #ffffff14}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+nav a.btn{padding:8px 16px;font-size:14px}
+.btn{display:inline-block;background:var(--coral);color:#fff;font-weight:700;text-decoration:none;padding:14px 26px;border-radius:999px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;border:2px solid var(--sea);color:var(--sea)}
+.hero{padding:72px 0 64px;background:radial-gradient(900px 400px at 85% 0%,#ff6b5733,transparent),linear-gradient(180deg,var(--dusk),var(--ink))}
+.hero h1{font-size:clamp(44px,11vw,96px);font-weight:800;max-width:11ch}
+.hero h1 span{color:var(--coral)}
+.hero p{max-width:46ch;font-size:19px;color:var(--muted);margin:20px 0 28px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:56px 0}
+section h2{font-size:clamp(30px,6vw,46px);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:56ch}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{background:var(--dusk);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px;border:1px solid #ffffff12}
+.card h3{font-size:26px}
+.tag{align-self:flex-start;background:#3cc8c022;color:var(--sea);font-size:13px;font-weight:700;padding:3px 12px;border-radius:999px}
+.card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:15px}
+.card dt{color:var(--muted)}
+.card dd{margin:0;white-space:pre-line}
+.card .btn{margin-top:auto;text-align:center}
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.steps div{border-left:3px solid var(--coral);padding-left:16px}
+.steps h3{font-size:22px;margin-bottom:4px}
+.steps p{margin:0;color:var(--muted)}
+.ad{margin:8px auto 0;text-align:center;min-height:100px}
+.ad small{display:block;color:var(--muted);font-size:12px}
+.contact{background:var(--sand);color:var(--ink);text-align:center;border-radius:24px;padding:44px 20px}
+.contact p{max-width:44ch;margin:12px auto 22px}
+footer{padding:36px 0 90px;color:var(--muted);font-size:14px;text-align:center}
+footer a{margin:0 8px}
+.wa{position:fixed;right:16px;bottom:16px;z-index:20;background:#25d366;color:#fff;font-weight:700;text-decoration:none;padding:13px 20px;border-radius:999px;box-shadow:0 6px 20px #0006}
+.ev{display:grid;gap:10px}
+.evi{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;background:var(--dusk);border-radius:16px;padding:14px 16px;border:1px solid #ffffff12}
+.evd{text-align:center;line-height:1.1}
+.evd b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:32px;color:var(--coral)}
+.evd span{font-size:13px;color:var(--muted)}
+.evi h3{font-size:19px}
+.evi p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.evi .btn{padding:10px 16px;font-size:14px}
+@media(max-width:520px){.evi{grid-template-columns:60px 1fr}.evi .btn{grid-column:1/-1;text-align:center}}
+.social{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.social a{display:block;background:var(--dusk);border:1px solid #ffffff12;border-radius:16px;padding:18px 20px;text-decoration:none;transition:transform .15s}
+.social a:hover{transform:translateY(-2px)}
+.social small{display:block;color:var(--muted);font-size:14px}
+.social b{font-family:"Bricolage Grotesque",sans-serif;font-size:22px}
+:focus-visible{outline:3px solid var(--sea);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap"><b>WestSevilla</b><a class="btn" href="#locales">Ver locales</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>West<span>Sevilla</span></h1>
+  <p>Las discotecas de Sevilla en un solo sitio. Elige dónde sales y compra tu entrada online.</p>
+  <div class="cta">
+    <a class="btn" href="#locales">Comprar entradas</a>
+    <a class="btn alt" href="#contacto">Hablar con nosotros</a>
+  </div>
+</div></header>
+
+<section id="eventos"><div class="wrap">
+  <h2>Próximos eventos</h2>
+  <p class="sub">Esta semana en Bottom, Vizzio y Abril. Se actualiza cada lunes.</p>
+  <div class="ev" id="events"></div>
+</div></section>
+
+<section id="locales"><div class="wrap">
+  <h2>Dónde salir</h2>
+  <p class="sub">Tres discotecas. Pulsa en la que te guste para comprar tu entrada.</p>
+  <div class="grid" id="venues"></div>
+  <div class="ad">
+    <small>Publicidad</small>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5156974436346448" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Cómo funciona</h2>
+  <p class="sub">Sin complicaciones, desde el móvil.</p>
+  <div class="steps">
+    <div><h3>Elige el local</h3><p>Mira estilo, horario y precio de cada sitio.</p></div>
+    <div><h3>Compra tu entrada</h3><p>Pago online seguro a través de Fourvenues.</p></div>
+    <div><h3>Enseña el QR</h3><p>Lo recibes al momento. Lo presentas en la puerta.</p></div>
+  </div>
+</div></section>
+
+<section id="redes"><div class="wrap">
+  <h2>Síguenos en Instagram</h2>
+  <p class="sub">Novedades, fiestas y sorteos.</p>
+  <div class="social">
+    <a href="https://www.instagram.com/westsevilla/" target="_blank" rel="noopener"><small>Instagram oficial</small><b>@westsevilla</b></a>
+    <a href="https://www.instagram.com/javigavira_05/" target="_blank" rel="noopener"><small>Instagram personal</small><b>@javigavira_05</b></a>
+  </div>
+</div></section>
+
+<section id="contacto"><div class="wrap">
+  <div class="contact">
+    <h2>¿Vais en grupo o tenéis dudas?</h2>
+    <p>Escríbenos por WhatsApp y te ayudamos con entradas, listas y mesas.</p>
+    <a class="btn" href="https://wa.me/34642289782?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20entradas" id="wa2">Escribir por WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>Venta de entradas para mayores de edad según la normativa de cada local. Bebe con moderación.</p>
+  <a href="privacidad.html">Privacidad</a><a href="aviso-legal.html">Aviso legal</a><a href="cookies.html">Cookies</a>
+</div></footer>
+
+<a class="wa" href="https://wa.me/34642289782?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20entradas" id="wa1" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+<script>
+/* ===== EDITA SOLO ESTA ZONA ===== */
+const CONFIG = {
+  fourvenues: "https://site.fourvenues.com/es/westsevilla",   // enlace a tu perfil de promotor
+  whatsapp: "34642289782",                     // tu número con prefijo, sin + ni espacios
+  adsenseId: "ca-pub-5156974436346448"         // tu ID de AdSense
+};
+const VENUES = [
+  {name:"Bottom", tag:"Discoteca", estilo:"Consultar", horario:"Jue a sáb: 00:00 a 07:30", precio:"Consultar", url:CONFIG.fourvenues},
+  {name:"Vizzio", tag:"Discoteca", estilo:"Consultar", horario:"Mié a sáb: 00:00 a 07:30", precio:"Consultar", url:CONFIG.fourvenues},
+  {name:"Abril",  tag:"Discoteca", estilo:"Consultar", horario:"Jue y dom: 00:00 a 06:00\nVie y sáb: 00:00 a 07:00", precio:"Consultar", url:CONFIG.fourvenues}
+];
+/* ================================= */
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.getElementById("venues").innerHTML = VENUES.map(v => `
+  <article class="card">
+    <span class="tag">${esc(v.tag)}</span>
+    <h3>${esc(v.name)}</h3>
+    <dl><dt>Música</dt><dd>${esc(v.estilo)}</dd><dt>Horario</dt><dd>${esc(v.horario)}</dd><dt>Entrada</dt><dd>${esc(v.precio)}</dd></dl>
+    <a class="btn" href="${esc(v.url)}" target="_blank" rel="noopener">Comprar entrada</a>
+  </article>`).join("");
+
+const wa = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent("Hola, quiero información sobre entradas");
+["wa1","wa2"].forEach(id => document.getElementById(id).href = wa);
+
+/* Inicializa el banner de AdSense */
+try{ (window.adsbygoogle = window.adsbygoogle || []).push({}); }catch(e){}
+
+/* ===== EVENTOS: se leen de events.json (se renueva cada lunes) ===== */
+const EVENTS_FALLBACK = [{"fecha": "2026-10-07", "inicio": "23:00", "fin": "", "titulo": "🤯 MIÉRCOLES DE RELIO 🤯", "local": "Vizzio Club", "url": "https://site.fourvenues.com/es/westsevilla", "precios": []}, {"fecha": "2026-10-08", "inicio": "23:00", "fin": "", "titulo": "🧸 JUEVES DE PELUCHEO 🧸", "local": "Vizzio Club", "url": "https://site.fourvenues.com/es/westsevilla", "precios": []}, {"fecha": "2026-10-08", "inicio": "00:00", "fin": "06:00", "titulo": "MAMONEO #2 W/ El Cejas", "local": "Abril Sevilla", "url": "https://site.fourvenues.com/es/westsevilla", "precios": []}, {"fecha": "2026-10-08", "inicio": "00:00", "fin": "", "titulo": "JUEVES FOMO", "local": "Bottom", "url": "https://site.fourvenues.com/es/westsevilla", "precios": []}, {"fecha": "2026-10-09", "inicio": "00:00", "fin": "", "titulo": "❤️‍🔥 VIERNES 9 ❤️‍🔥", "local": "Vizzio Club", "url": "https://site.fourvenues.com/es/westsevilla", "precios": []}, {"fecha": "2026-10-09", "inicio": "00:00", "fin": "06:45", "titulo": "VIERNES ABRIL", "local": "Abril Sevilla", "url": "https://site.fourvenues.com/es/westsevilla", "precios": []}, {"fecha": "2026-10-09", "inicio": "00:00", "fin": "", "titulo": "VIERNES JANGUEO", "local": "Bottom", "url": "https://site.fourvenues.com/es/westsevilla", "precios": []}, {"fecha": "2026-10-10", "inicio": "00:00", "fin": "", "titulo": "💥 SÁBADO 10 💥", "local": "Vizzio Club", "url": "https://site.fourvenues.com/es/westsevilla", "precios": []}, {"fecha": "2026-10-10", "inicio": "00:00", "fin": "", "titulo": "SÁBADO BANDIDO", "local": "Bottom", "url": "https://site.fourvenues.com/en/caramelo/events/KVV4", "precios": [{"nombre": "Super promo (1 consumición hasta 01:30)", "precio": 8}, {"nombre": "Anticipada (1 consumición hasta 01:00)", "precio": 15}]}];
+function renderEvents(list){
+  const now = new Date(), hoy = now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0");
+  const prox = list.filter(e => e.fecha >= hoy).sort((a,b) => (a.fecha+a.inicio).localeCompare(b.fecha+b.inicio));
+  const box = document.getElementById("events");
+  if(!prox.length){ box.innerHTML = '<p class="sub">Pronto publicaremos los próximos eventos.</p>'; return; }
+  box.innerHTML = prox.map(e => {
+    const d = new Date(e.fecha+"T12:00:00");
+    const dia = d.toLocaleDateString("es-ES",{weekday:"short"}), mes = d.toLocaleDateString("es-ES",{month:"short"});
+    const hora = e.inicio + " a " + (e.fin || "cierre");
+    const desde = e.precios && e.precios.length ? " · Desde " + Math.min(...e.precios.map(p=>p.precio)) + " €" : "";
+    return `<article class="evi">
+      <div class="evd"><b>${d.getDate()}</b><span>${esc(dia)} ${esc(mes)}</span></div>
+      <div><h3>${esc(e.titulo)}</h3><p>${esc(e.local)} · ${esc(hora)}${desde}</p></div>
+      <a class="btn" href="${esc(e.url || CONFIG.fourvenues)}" target="_blank" rel="noopener">Entradas</a>
+    </article>`;
+  }).join("");
+}
+renderEvents(EVENTS_FALLBACK);
+fetch("events.json",{cache:"no-cache"}).then(r => r.ok ? r.json() : null).then(j => {
+  if(j && Array.isArray(j.eventos) && j.eventos.length) renderEvents(j.eventos);
+}).catch(() => {});
+</script>
+</body>
+</html>
