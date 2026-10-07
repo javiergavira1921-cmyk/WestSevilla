@@ -1,0 +1,96 @@
+{
+ "actualizado": "2026-10-07",
+ "fuente": "https://site.fourvenues.com/es/westsevilla",
+ "eventos": [
+  {
+   "fecha": "2026-10-07",
+   "inicio": "23:00",
+   "fin": "",
+   "titulo": "🤯 MIÉRCOLES DE RELIO 🤯",
+   "local": "Vizzio Club",
+   "url": "https://site.fourvenues.com/es/westsevilla",
+   "precios": []
+  },
+  {
+   "fecha": "2026-10-08",
+   "inicio": "23:00",
+   "fin": "",
+   "titulo": "🧸 JUEVES DE PELUCHEO 🧸",
+   "local": "Vizzio Club",
+   "url": "https://site.fourvenues.com/es/westsevilla",
+   "precios": []
+  },
+  {
+   "fecha": "2026-10-08",
+   "inicio": "00:00",
+   "fin": "06:00",
+   "titulo": "MAMONEO #2 W/ El Cejas",
+   "local": "Abril Sevilla",
+   "url": "https://site.fourvenues.com/es/westsevilla",
+   "precios": []
+  },
+  {
+   "fecha": "2026-10-08",
+   "inicio": "00:00",
+   "fin": "",
+   "titulo": "JUEVES FOMO",
+   "local": "Bottom",
+   "url": "https://site.fourvenues.com/es/westsevilla",
+   "precios": []
+  },
+  {
+   "fecha": "2026-10-09",
+   "inicio": "00:00",
+   "fin": "",
+   "titulo": "❤️‍🔥 VIERNES 9 ❤️‍🔥",
+   "local": "Vizzio Club",
+   "url": "https://site.fourvenues.com/es/westsevilla",
+   "precios": []
+  },
+  {
+   "fecha": "2026-10-09",
+   "inicio": "00:00",
+   "fin": "06:45",
+   "titulo": "VIERNES ABRIL",
+   "local": "Abril Sevilla",
+   "url": "https://site.fourvenues.com/es/westsevilla",
+   "precios": []
+  },
+  {
+   "fecha": "2026-10-09",
+   "inicio": "00:00",
+   "fin": "",
+   "titulo": "VIERNES JANGUEO",
+   "local": "Bottom",
+   "url": "https://site.fourvenues.com/es/westsevilla",
+   "precios": []
+  },
+  {
+   "fecha": "2026-10-10",
+   "inicio": "00:00",
+   "fin": "",
+   "titulo": "💥 SÁBADO 10 💥",
+   "local": "Vizzio Club",
+   "url": "https://site.fourvenues.com/es/westsevilla",
+   "precios": []
+  },
+  {
+   "fecha": "2026-10-10",
+   "inicio": "00:00",
+   "fin": "",
+   "titulo": "SÁBADO BANDIDO",
+   "local": "Bottom",
+   "url": "https://site.fourvenues.com/en/caramelo/events/KVV4",
+   "precios": [
+    {
+     "nombre": "Super promo (1 consumición hasta 01:30)",
+     "precio": 8
+    },
+    {
+     "nombre": "Anticipada (1 consumición hasta 01:00)",
+     "precio": 15
+    }
+   ]
+  }
+ ]
+}
