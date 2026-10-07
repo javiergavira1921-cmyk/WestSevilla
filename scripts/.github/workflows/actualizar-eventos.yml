@@ -1,0 +1,118 @@
+.github/workflows/actualizar-eventos.yml #!/usr/bin/env python3
+"""Lee la agenda de Fourvenues y actualiza events.json.
+Uso: python3 scripts/actualizar_eventos.py [archivo_html_local_para_pruebas]"""
+import datetime, json, os, re, sys, urllib.request
+from html.parser import HTMLParser
+
+URL = "https://site.fourvenues.com/es/westsevilla"
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "events.json")
+MESES = {m: i + 1 for i, m in enumerate("enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre".split())}
+DIA = r"(?:lun|mar|mi[eé]|jue|vie|s[aá]b|dom)[a-záéíóú]*\.?,?"
+RE_FECHA = re.compile(r"^" + DIA + r"\s+(\d{1,2})\s+de\s+([a-záéíóú]+)$", re.I)
+RE_HORA = re.compile(r"^\d{2}:\d{2}$")
+
+class Texto(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.t = []; self.skip = 0
+    def handle_starttag(self, tag, a):
+        if tag in ("script", "style"): self.skip += 1
+    def handle_endtag(self, tag):
+        if tag in ("script", "style") and self.skip: self.skip -= 1
+    def handle_data(self, d):
+        if not self.skip and d.strip(): self.t.append(d.strip())
+
+def lineas(html):
+    p = Texto(); p.feed(html)
+    t = "\n".join(p.t)
+    t = re.sub(r"(\d{2}:\d{2})", r"\n\1\n", t)
+    t = re.sub(r"(CIERRE|Más información)", r"\n\1\n", t)
+    t = re.sub(r"((?:" + DIA + r")\s+\d{1,2}\s+de\s+[a-záéíóú]+)", r"\n\1\n", t, flags=re.I)
+    return [l.strip() for l in t.split("\n") if l.strip()]
+
+def fecha_iso(d, m):
+    hoy = datetime.date.today()
+    f = datetime.date(hoy.year, MESES[m.lower()], int(d))
+    if f < hoy - datetime.timedelta(days=60):
+        f = f.replace(year=hoy.year + 1)
+    return f.isoformat()
+
+def parsear(html):
+    eventos, cur = [], None
+    def cerrar():
+        nonlocal cur
+        if cur and cur["rest"]:
+            r = cur["rest"]
+            h = cur["horas"]
+            if len(r) == 1:  # título y local pegados en un solo texto
+                m = re.search(r"\s+(VIZZIO CLUB|ABRIL SEVILLA|BOTTOM)$", r[0], re.I)
+                if m: r = [r[0][:m.start()], m.group(1)]
+            eventos.append({"fecha": cur["fecha"], "inicio": h[0] if h else "", "fin": h[1] if len(h) > 1 else "",
+                            "titulo": r[0], "local": r[-1] if len(r) > 1 else "", "url": URL, "precios": []})
+        cur = None
+    for l in lineas(html):
+        m = RE_FECHA.match(l)
+        if m:
+            if cur and not cur["rest"] and not cur["horas"]:
+                cur["fecha"] = fecha_iso(*m.groups()); continue  # fecha repetida
+            cerrar(); cur = {"fecha": fecha_iso(*m.groups()), "horas": [], "rest": []}; continue
+        if cur is None: continue
+        if l == "Más información": cerrar()
+        elif RE_HORA.match(l): cur["horas"].append(l)
+        elif l in ("CIERRE", "Ver todos los eventos"): pass
+        else: cur["rest"].append(l)
+    cerrar()
+    return eventos
+
+def main():
+    if len(sys.argv) > 1:
+        html = open(sys.argv[1], encoding="utf-8").read()
+    else:
+        req = urllib.request.Request(URL, headers={"User-Agent": "Mozilla/5.0", "Accept-Language": "es-ES,es"})
+        html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
+    nuevos = parsear(html)
+    if not nuevos:
+        sys.exit("ERROR: no se encontró ningún evento. Fourvenues puede haber cambiado su página; events.json no se ha modificado.")
+    try: antes = json.load(open(OUT, encoding="utf-8")).get("eventos", [])
+    except Exception: antes = []
+    previo = {(e["fecha"], e["titulo"], e["local"]): e for e in antes}
+    for e in nuevos:  # conserva precios y enlaces ya conocidos
+        p = previo.get((e["fecha"], e["titulo"], e["local"]))
+        if p: e["precios"] = p.get("precios", []); e["url"] = p.get("url", e["url"])
+    nuevos.sort(key=lambda e: (e["fecha"], e["inicio"]))
+    json.dump({"actualizado": datetime.date.today().isoformat(), "fuente": URL, "eventos": nuevos},
+              open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"OK: {len(nuevos)} eventos")
+
+main()
+
+name: Actualizar eventos
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # 08:00 Madrid en verano
+    - cron: "0 7 * * 1"   # 08:00 Madrid en invierno
+  workflow_dispatch:       # botón manual
+permissions:
+  contents: write
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Solo seguir si son las 08:00 en Madrid
+        id: hora
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(TZ=Europe/Madrid date +%H)" != "08" ]; then
+            echo "seguir=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "seguir=si" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Leer agenda de Fourvenues
+        if: steps.hora.outputs.seguir == 'si'
+        run: python3 scripts/actualizar_eventos.py
+      - name: Guardar cambios
+        if: steps.hora.outputs.seguir == 'si'
+        run: |
+          git config user.name "eventos-bot"
+          git config user.email "eventos-bot@users.noreply.github.com"
+          git add events.json
+          git diff --cached --quiet || (git commit -m "Actualizar eventos" && git push)
